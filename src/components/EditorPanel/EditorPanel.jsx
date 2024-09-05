@@ -2,8 +2,8 @@ import { useMemo, useState } from "react";
 import st from "./EditorPanel.module.scss";
 import deleteSvg from "../../assets/DeleteBin.svg";
 import editSvg from "../../assets/Edit.svg";
-import { capitalize } from "../../helper/capitalize";
-import { debounce } from "../../helper/debounce";
+import { capitalize } from "../../helpers/capitalize";
+import { debounce } from "../../helpers/debounce";
 
 const EditorPanel = ({ setDataTable, dataTable, setColumns, columns }) => {
     const [ changingName, setChangingName ] = useState("");
@@ -33,9 +33,9 @@ const EditorPanel = ({ setDataTable, dataTable, setColumns, columns }) => {
         const typeEvent = e.target.getAttribute("data-event");
 
         if (Boolean(typeEvent) && typeEvent === "bt-edit") {
+            
             setChangingName(nameColumn);
             setNewNameColumn(nameColumn);
-            console.log(nameColumn)
         }
     }
 
@@ -136,6 +136,7 @@ const EditorPanel = ({ setDataTable, dataTable, setColumns, columns }) => {
                         </button>
                     <input type="text"
                            value={inputNameColumn}
+                           placeholder="Название"
                            onChange={changeInputNameColumn}
                            className={isActiveAddingWindow ? st.activeAddingWindow : st.addColumnInput} />
                 </div>
