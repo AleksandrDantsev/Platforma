@@ -1,0 +1,60 @@
+.editorWrapper {
+    width: 25%;
+    padding: 8px 25px;
+    background-color: #C4C4C4;
+}
+.titleEditor {
+    h2 {
+        font-size: 18px;
+    }
+}
+.columnsList {
+    width: 100%;
+    margin: 20px 0;
+}
+.nameColumnInput {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 3px;
+    display: inline;
+}
+.nameColumnSpan {
+    display: block;
+    min-width: 15%;
+}
+.columnsList { 
+    li {
+        display: flex;
+        align-items: center;
+    }
+}
+.events {
+    display: flex;
+    margin-left: 20px;
+}
+.events button {
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
+}
+.addColumn {
+    display: flex;
+    justify-content: center;
+    margin: 13px 0;
+    white-space: nowrap;
+    font-size: 13px;
+}
+.addColumnInput {
+    width: 0;
+    opacity: 0;
+    transition-duration: 180ms;
+    border-radius: 3px;
+}
+.activeAddingWindow {
+    transition-duration: 200ms;
+    width: 50% ;
+    opacity: 1;
+    border-radius: 3px;
+    padding: 0 10px;
+}
