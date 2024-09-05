@@ -13,10 +13,11 @@
     margin: 18px 0;
 }
 .nameColumnInput {
+    display: inline;
     width: 50%;
     background-color: #fff;
     border-radius: 3px;
-    display: inline;
+    padding: 0 3px;
 }
 .nameColumnSpan {
     display: block;
