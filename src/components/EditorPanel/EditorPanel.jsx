@@ -33,7 +33,6 @@ const EditorPanel = ({ setDataTable, dataTable, setColumns, columns }) => {
         const typeEvent = e.target.getAttribute("data-event");
 
         if (Boolean(typeEvent) && typeEvent === "bt-edit") {
-            
             setChangingName(nameColumn);
             setNewNameColumn(nameColumn);
         }
