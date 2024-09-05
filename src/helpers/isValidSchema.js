@@ -1,4 +1,5 @@
-import { schema } from './schema';
+import { schema } from "../schema";
+import { data } from "../data";
 import Ajv from 'ajv';
 
 export const isValidSchema = () => {
