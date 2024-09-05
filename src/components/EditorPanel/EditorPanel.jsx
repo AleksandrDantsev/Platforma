@@ -30,6 +30,7 @@ const EditorPanel = ({ setDataTable, dataTable, setColumns, columns }) => {
     }
 
     const changeNameColumn = (e, nameColumn) => {
+        if (isActiveAddingWindow) setActiveAddingWindow(false);
         const typeEvent = e.target.getAttribute("data-event");
 
         if (Boolean(typeEvent) && typeEvent === "bt-edit") {
@@ -39,6 +40,7 @@ const EditorPanel = ({ setDataTable, dataTable, setColumns, columns }) => {
     }
 
     const addColumn = () => {
+        if (changingName) setChangingName("");
         if (inputNameColumn && isActiveAddingWindow) {
             const isAlreadyExist = columns.find(el => el.dataField === inputNameColumn);
 
