@@ -10,7 +10,7 @@
 }
 .columnsList {
     width: 100%;
-    margin: 20px 0;
+    margin: 18px 0;
 }
 .nameColumnInput {
     width: 50%;
@@ -26,6 +26,7 @@
     li {
         display: flex;
         align-items: center;
+        margin-left: 5px;
     }
 }
 .events {
@@ -41,7 +42,7 @@
 .addColumn {
     display: flex;
     justify-content: center;
-    margin: 13px 0;
+    margin: 20px 0;
     white-space: nowrap;
     font-size: 13px;
 }
@@ -57,4 +58,32 @@
     opacity: 1;
     border-radius: 3px;
     padding: 0 10px;
+}
+
+@media screen and (max-width: 1050px) {
+    .nameColumnSpan {
+        display: block;
+        min-width: 35%;
+    }
+    .titleEditor {
+        h2 {
+            white-space: nowrap;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .editorWrapper {
+        width: 100%;
+    }
+    .nameColumnSpan {
+        width: auto;
+        flex-grow: 1;
+    }
+    .nameColumnInput {
+        width: 100%;
+    }
+    .titleEditor {
+        margin-top: 20px;
+    }
 }
